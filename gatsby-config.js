@@ -1,11 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
-    author: `Kyle Mathews`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    title: `Test Driven Algorithms`,
+    author: `Jordan Ristow`,
+    description: `This site will be an exploration of developing algorithms in a test driven manner.`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `jordanristow`,
+      linkedin: 'jordanristow'
     },
   },
   plugins: [
@@ -51,14 +52,16 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         //trackingId: `ADD YOUR TRACKING ID HERE`,
+        trackingId: `UA-59453387-3`,
+        head: true,
       },
     },
     `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Test Driven Algorithms`,
+        short_name: `TDD Algorithms`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
