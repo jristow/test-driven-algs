@@ -3,7 +3,7 @@ module.exports = {
     title: `Test Driven Algorithms`,
     author: `Jordan Ristow`,
     description: `This site will be an exploration of developing algorithms in a test driven manner.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    siteUrl: `https://testdrivenalgorithms.com`,
     social: {
       twitter: `jordanristow`,
       linkedin: 'jordanristow'
