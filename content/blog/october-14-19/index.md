@@ -1,6 +1,6 @@
 ---
 title: Array Plus One
-date: "2019-09-17"
+date: "2019-10-14"
 description: We are passed in an array of integers representing an integer i.e. [1, 2, 3] is 123. We want to add one to this larger integer.
 ---
 
@@ -34,13 +34,19 @@ it('should return [2, 0, 0] if [1, 9, 9] is passed in' () =>{
     const newArray: number[] = plusOne.addOne([1, 9, 9]);
     expect(newArray).toEqual([2, 0, 0]);
 });
+
+it('should add an element if an array of only 9 is passed in', () => {
+    const plusOne: PlusOne = TestBed.get(PlusOne);
+    const newArray: number[] = plusOne.addOne([9,9]);
+    expect(newArray).toEqual([1,0,0]);
+})
 ```
 
 We could write more tests to check other behaviors, but these cases are enough to help us develop our algorithm.
 
 ## Description of Algorithm
 
-There a few ways we could handle this problem. One way is to convert our array into a string, then convert that into a number, add one to that number then convert the whole thing back into an array. We can run into problems with this if a very large number gets passed in and we didn't use a large enough number type.
+There are a few ways we could handle this problem. One way is to convert our array into a string, then convert that into a number, add one to that number then convert the whole thing back into an array. We can run into problems with this if a very large number gets passed in and we didn't use a large enough number type.
 
 A better solution is to start from the end of the array, check if the number at that position is a 9, if so we pop that number off and add 1 to a counter variable. We move to the next to last item in the array and check if that is a 9, and repeat that process. Once we hit a number that isn't 9, we add 1 to it and then fill the array with 0's based on our counter value.
 
@@ -100,6 +106,13 @@ else {
 }
 ```
 
-Finally, if we 
+Finally, if every element of the array has been popped off, we push a new array starting with 1 and filled out with 0's for each element of the original array (i.e. [9,9,9] becomes [1,0,0,0]).
+
+``` typescript
+digits.push(1, ...new Array(carry).fill(0));
+return digits;
+```
 
 ## Conclusion
+
+Since we do not create any new temporary arrays, this algorithm operates in constant space. Further, this algorithm only traverses through the original array once and at worst rebuilds the array, which gives it linear time performance.

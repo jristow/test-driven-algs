@@ -1,6 +1,6 @@
 ---
 title: What is Test Driven Development Anyway?
-date: "2019-09-17"
+date: "2019-09-19"
 description: You keep saying Test Driven Development, what does that actually mean? Why should you develop software that way? 
 ---
 

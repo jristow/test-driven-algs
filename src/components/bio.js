@@ -7,7 +7,7 @@
 
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Image from "gatsby-image"
+
 
 import { rhythm } from "../utils/typography"
 
@@ -41,22 +41,14 @@ const Bio = () => {
         marginBottom: rhythm(2.5),
       }}
     >
-      {/* <Image
-        fixed={data.avatar.childImageSharp.fixed}
-        alt={author}
-        style={{
-          marginRight: rhythm(1 / 2),
-          marginBottom: 0,
-          minWidth: 50,
-          borderRadius: `100%`,
-        }}
-        imgStyle={{
-          borderRadius: `50%`,
-        }}
-      /> */}
       <p>
-        Written by <strong>{author}</strong> who enjoys building useful things
-        and exploring computer science.
+        Hi! I'm <strong>{author}</strong> a recovering mechanical engineer turned
+        software nerd. Here I write about software engineering and computer science
+        topics. If you're interested in leadership and management topics, head on 
+        over to <a href="https://jordanristow.com/">jordanristow.com</a> and 
+        check out my writing there. If you like what you see here, connect with me
+        on social!
+        <br></br>
         {` `}
         Social:
         {` `}
